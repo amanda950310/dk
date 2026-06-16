@@ -1,0 +1,511 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安心｜極速信用貸</title>
+
+<meta name="keywords" content="極速信用貸,免抵押貸款,快速貸款,線上貸款,五分鐘審批">
+<meta name="description" content="安心極速信用貸，免抵押、免保人、全程線上申請，最快五分鐘取得初步審批結果。">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Noto Sans TC',sans-serif;
+}
+
+body{
+background:#f4f8ff;
+color:#1e293b;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:rgba(0,102,255,.15);
+border-radius:50%;
+top:-200px;
+right:-150px;
+filter:blur(120px);
+z-index:-1;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px;
+background:
+linear-gradient(135deg,#0038ff 0%,#008cff 100%);
+position:relative;
+overflow:hidden;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(255,255,255,.15);
+border-radius:50%;
+left:-250px;
+bottom:-250px;
+}
+
+.container{
+max-width:1300px;
+width:100%;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:50px;
+align-items:center;
+}
+
+.hero-content{
+color:white;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(20px);
+border-radius:999px;
+margin-bottom:25px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:72px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h2{
+font-size:28px;
+font-weight:500;
+margin-bottom:30px;
+opacity:.95;
+}
+
+.highlight{
+color:#ffd700;
+}
+
+.stats{
+display:flex;
+gap:25px;
+margin-top:40px;
+flex-wrap:wrap;
+}
+
+.stat{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+padding:20px;
+border-radius:20px;
+min-width:170px;
+}
+
+.stat h3{
+font-size:34px;
+margin-bottom:5px;
+}
+
+.form-card{
+background:rgba(255,255,255,.16);
+backdrop-filter:blur(35px);
+border:1px solid rgba(255,255,255,.2);
+padding:35px;
+border-radius:28px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.form-card h3{
+color:white;
+text-align:center;
+margin-bottom:25px;
+font-size:28px;
+}
+
+.form-group{
+margin-bottom:14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+width:100%;
+padding:14px;
+border:none;
+border-radius:14px;
+font-size:15px;
+outline:none;
+}
+
+.form-group textarea{
+resize:none;
+height:90px;
+}
+
+.submit-btn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:16px;
+background:#00d26a;
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.submit-btn:hover{
+transform:translateY(-2px);
+}
+
+.section{
+padding:90px 30px;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+margin-bottom:15px;
+font-weight:800;
+}
+
+.subtitle{
+text-align:center;
+color:#64748b;
+margin-bottom:60px;
+}
+
+.features{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:24px;
+box-shadow:0 10px 35px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.icon{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:12px;
+}
+
+.steps{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.step{
+background:white;
+padding:35px;
+text-align:center;
+border-radius:25px;
+box-shadow:0 10px 35px rgba(0,0,0,.05);
+}
+
+.step-number{
+width:70px;
+height:70px;
+background:linear-gradient(135deg,#0066ff,#00c2ff);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:28px;
+font-weight:700;
+margin:auto auto 20px;
+}
+
+.footer{
+background:#0f172a;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+.line-btn{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#06c755;
+color:white;
+text-decoration:none;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+box-shadow:0 15px 30px rgba(6,199,85,.4);
+z-index:999;
+}
+
+@media(max-width:992px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.features,
+.steps{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:30px 20px;
+}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="badge">
+安心金融服務平台
+</div>
+
+<h1>
+極速信用貸
+</h1>
+
+<h2>
+免抵押・免保人・最快
+<span class="highlight">5分鐘取得初步審批結果</span>
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>300萬</h3>
+<p>最高額度</p>
+</div>
+
+<div class="stat">
+<h3>4.33%</h3>
+<p>參考利率</p>
+</div>
+
+<div class="stat">
+<h3>24H</h3>
+<p>全年受理</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="form-card">
+
+<h3>立即申請</h3>
+
+<form id="loanForm">
+
+<div class="form-group">
+<input type="text" placeholder="姓名" required>
+</div>
+
+<div class="form-group">
+<input type="number" placeholder="年齡" required>
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="地區" required>
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="工作" required>
+</div>
+
+<div class="form-group">
+<input type="number" placeholder="每月收入" required>
+</div>
+
+<div class="form-group">
+<input type="number" placeholder="貸款金額" required>
+</div>
+
+<div class="form-group">
+<textarea placeholder="貸款用途"></textarea>
+</div>
+
+<div class="form-group">
+<select required>
+<option value="">是否警示帳戶</option>
+<option>否</option>
+<option>是</option>
+</select>
+</div>
+
+<div class="form-group">
+<select required>
+<option value="">是否有涉詐前科</option>
+<option>否</option>
+<option>是</option>
+</select>
+</div>
+
+<div class="form-group">
+<input type="text" placeholder="LINE ID" required>
+</div>
+
+<div class="form-group">
+<select required>
+<option value="">還款期限</option>
+<option>1個月</option>
+<option>3個月</option>
+<option>6個月</option>
+<option>12個月</option>
+<option>18個月</option>
+<option>24個月</option>
+<option>30個月</option>
+<option>36個月</option>
+</select>
+</div>
+
+<button type="submit" class="submit-btn">
+立即取得審批結果
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">為什麼選擇安心</h2>
+<p class="subtitle">快速、方便、安全的線上貸款服務</p>
+
+<div class="features">
+
+<div class="card">
+<div class="icon">⚡</div>
+<h3>快速審核</h3>
+<p>最快五分鐘取得初步審批結果。</p>
+</div>
+
+<div class="card">
+<div class="icon">🛡️</div>
+<h3>免抵押</h3>
+<p>無需房產或車輛作為擔保。</p>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>全程線上</h3>
+<p>手機即可完成申請流程。</p>
+</div>
+
+<div class="card">
+<div class="icon">🔒</div>
+<h3>資料保密</h3>
+<p>重視個人資料安全與隱私。</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">申請流程</h2>
+<p class="subtitle">簡單四步驟完成申請</p>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>填寫資料</h3>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>系統審核</h3>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>LINE聯繫</h3>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<h3>完成辦理</h3>
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+<h3>安心｜極速信用貸</h3>
+<p>免抵押｜線上申請｜快速審核</p>
+<br>
+<p>客服將於24小時內透過您填寫的LINE與您聯繫。</p>
+</footer>
+
+<a href="#" class="line-btn">L</a>
+
+<script>
+document.getElementById('loanForm').addEventListener('submit',function(e){
+
+e.preventDefault();
+
+alert('客服會在24小時內透過您的LINE與您聯繫，請留意訊息。');
+
+this.reset();
+
+});
+</script>
+
+</body>
+</html>
+```
